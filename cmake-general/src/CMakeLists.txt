@@ -1,1 +1,2 @@
-add_executable (hello-world main)
+ADD_SUBDIRECTORY (hellolib)
+ADD_EXECUTABLE (hello-world main)

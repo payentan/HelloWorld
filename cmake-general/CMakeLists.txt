@@ -1,7 +1,10 @@
-project(hello-world)
+PROJECT (hello-world)
 
-message(STATUS "This is BINARY dir " ${PROJECT_BINARY_DIR})
-message(STATUS "This is SOURCE dir " ${PROJECT_SOURCE_DIR})
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
-add_subdirectory (src bin)
+message(STATUS "PROJECT_BINARY_DIR=" ${PROJECT_BINARY_DIR})
+message(STATUS "PROJECT_SOURCE_DIR=" ${PROJECT_SOURCE_DIR})
+
+ADD_SUBDIRECTORY (src bin)
+
 
