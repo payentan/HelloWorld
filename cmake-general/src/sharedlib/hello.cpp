@@ -2,5 +2,5 @@
 
 void HelloLibFun()
 {
-    cout<<"Hello World from static library"<<endl;
+    cout<<"Hello World from shared library"<<endl;
 }
