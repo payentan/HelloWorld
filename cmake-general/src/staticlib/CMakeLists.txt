@@ -1,3 +1,11 @@
+# Set the project name
+project (staticlib)
 
-ADD_LIBRARY (hellos STATIC hello)
-SET_TARGET_PROPERTIES(hellos PROPERTIES VERSION 1.2 SOVERSION 1)
+add_library(${PROJECT_NAME} hello.cpp)
+add_library(sub::lib2 ALIAS ${PROJECT_NAME})
+
+target_include_directories(${PROJECT_NAME}
+    INTERFACE
+        ${PROJECT_SOURCE_DIR}
+)
+

@@ -3,8 +3,6 @@
 
 #include <iostream>
 
-#include "hello_static.h"
-
 using namespace std;
 
 void HelloLibFun();

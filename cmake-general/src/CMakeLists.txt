@@ -1,12 +1,3 @@
-AUX_SOURCE_DIRECTORY(. SRC_LIST)
-ADD_EXECUTABLE(hello-world ${SRC_LIST})
-
-ADD_SUBDIRECTORY (${PROJECT_SOURCE_DIR}/src/staticlib)
-INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/src/staticlib)
-LINK_DIRECTORIES(${PROJECT_BINARY_DIR}/src/staticlib)
-TARGET_LINK_LIBRARIES(hello-world hellos)
-
-ADD_SUBDIRECTORY (${PROJECT_SOURCE_DIR}/src/sharedlib)
-INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/src/sharedlib)
-LINK_DIRECTORIES(${PROJECT_BINARY_DIR}/src/sharedlib)
-TARGET_LINK_LIBRARIES(hello-world hello)
+add_subdirectory(server)
+add_subdirectory(staticlib)
+add_subdirectory(sharedlib)
