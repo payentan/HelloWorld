@@ -1,7 +1,7 @@
 project (sharedlib)
 
 # Add a library with the above sources
-add_library(${PROJECT_NAME} hello.cpp)
+add_library(${PROJECT_NAME} SHARED hello.cpp)
 add_library(sub::lib1 ALIAS ${PROJECT_NAME})
 
 target_include_directories( ${PROJECT_NAME}
