@@ -11,3 +11,6 @@ target_link_libraries(${PROJECT_NAME}
     sub::lib2
 )
 
+target_compile_definitions(${PROJECT_NAME}
+    PRIVATE EX3
+)
