@@ -11,6 +11,23 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     "MinSizeRel" "RelWithDebInfo")
 endif()
 
+#message("List of compile features: ${CMAKE_CXX_COMPILE_FEATURES}")
+include(CheckCXXCompilerFlag)
+CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)
+CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
+CHECK_CXX_COMPILER_FLAG("-std=c++17" COMPILER_SUPPORTS_CXX17)
+
+# check results and add flag
+if(COMPILER_SUPPORTS_CXX11)#
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+    message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has C++11 support.")
+elseif(COMPILER_SUPPORTS_CXX0X)#
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
+    message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has C++0x support.")
+else()
+    message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
+endif()
+
 message(STATUS "PROJECT_NAME=" ${PROJECT_NAME})
 message(STATUS "PROJECT_BINARY_DIR=" ${PROJECT_BINARY_DIR})
 message(STATUS "PROJECT_SOURCE_DIR=" ${PROJECT_SOURCE_DIR})
