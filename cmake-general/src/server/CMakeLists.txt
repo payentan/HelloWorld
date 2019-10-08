@@ -7,8 +7,8 @@ add_executable(${PROJECT_NAME} main.cpp)
 # Link the header only library from subproject2 using it's alias sub::lib2
 # This will cause the include directories for that target to be added to this project
 target_link_libraries(${PROJECT_NAME}
-    sub::lib1
-    sub::lib2
+    staticlib
+    sharedlib
 )
 
 target_compile_definitions(${PROJECT_NAME}
