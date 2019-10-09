@@ -1,4 +1,8 @@
-AUX_SOURCE_DIRECTORY(. SRC_LIST)
+aux_source_directory(. SRC_LIST)
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${CMAKE_C_FLAGS_MY}") 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${CMAKE_CXX_FLAGS_MY}")
+set(CMAKE_LINKER_FLAGS "${CMAKE_LINKER_FLAGS} ${CMAKE_LINKER_FLAGS_MY}")
 
 # Add a library with the above sources
 add_library(${PROJECT_NAME} SHARED ${SRC_LIST})
