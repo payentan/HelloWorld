@@ -1,5 +1,5 @@
 # Set the project name
-project (staticlib)
+set(PROJECT_NAME_MY "staticlib")
 
 # extra C++ compiling flags
 set(CMAKE_C_FLAGS_MY "")

@@ -1,3 +1,5 @@
+project (${PROJECT_NAME_MY})
+
 aux_source_directory(. SRC_LIST)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${CMAKE_C_FLAGS_MY}") 

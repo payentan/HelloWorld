@@ -1,4 +1,4 @@
-project (sharedlib)
+set(PROJECT_NAME_MY "sharedlib")
 
 # extra C++ compiling flags
 set(CMAKE_C_FLAGS_MY "")
