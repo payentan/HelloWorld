@@ -1,3 +1,4 @@
 cmake_minimum_required(VERSION 3.10)
-SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
-INCLUDE("project")
+set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
+set(PROJECT_NAME_MY "hello-world")
+include("project")

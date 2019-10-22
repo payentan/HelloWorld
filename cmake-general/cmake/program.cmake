@@ -1,6 +1,6 @@
 project(${PROJECT_NAME_MY})
 
-AUX_SOURCE_DIRECTORY(. SRC_LIST)
+aux_source_directory(. SRC_LIST)
 
 # Create the executable
 add_executable(${PROJECT_NAME} ${SRC_LIST})
