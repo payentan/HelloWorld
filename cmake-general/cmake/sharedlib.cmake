@@ -9,6 +9,10 @@ set(CMAKE_LINKER_FLAGS "${CMAKE_LINKER_FLAGS} ${CMAKE_LINKER_FLAGS_MY}")
 # Add a library with the above sources
 add_library(${PROJECT_NAME} SHARED ${SRC_LIST})
 
+target_link_libraries(${PROJECT_NAME}
+    ${TARGET_LINK_LIBRARIES_MY}
+)
+
 target_include_directories( ${PROJECT_NAME}
     PUBLIC
         ${PROJECT_SOURCE_DIR}

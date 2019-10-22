@@ -9,4 +9,6 @@ set(CMAKE_CXX_FLAGS_MY "")
 # extra linking flags
 set(CMAKE_LINKER_FLAGS_MY "")
 
+set(TARGET_LINK_LIBRARIES_MY staticlib)
+
 include (sharedlib)
