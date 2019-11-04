@@ -1,4 +1,3 @@
-project (${PROJECT_NAME_MY})
 
 aux_source_directory(. SRC_LIST)
 

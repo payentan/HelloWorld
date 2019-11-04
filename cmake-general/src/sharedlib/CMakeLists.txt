@@ -1,4 +1,5 @@
 set(PROJECT_NAME_MY "sharedlib")
+project (${PROJECT_NAME_MY})
 
 # extra C++ compiling flags
 set(CMAKE_C_FLAGS_MY "")
